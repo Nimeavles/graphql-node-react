@@ -1,10 +1,8 @@
 FROM node:19-alpine
 
-RUN mkdir /app
-
 RUN corepack enable
 
-WORKDIR /app
+WORKDIR /client
 
 COPY package*.json ./
 
