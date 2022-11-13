@@ -12,3 +12,17 @@ services:
       - "3000:3000"
     volumes:
       - ./server:/server
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'resume_manager'
+      MYSQL_USER: 'admin'
+      MYSQL_PASSWORD: 'admin'
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - ./server/mysql_data:/var/lib/mysql
