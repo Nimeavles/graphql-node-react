@@ -1,4 +1,4 @@
-# **Resume Creator With tRPC API**
+# **Resume Creator With Graphql API**
 
 ## **How to run the proyect on your local machine?**
 
@@ -6,9 +6,7 @@ For running the proyect, you have two alternatives, or you run the proyect with 
 
 Docker:
 ```
-
 docker-compose up -d --build
-
 ```
 
 Locally:
