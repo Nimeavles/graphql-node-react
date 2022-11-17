@@ -1,0 +1,18 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:root@localhost:3306/resume_manager"
+}
+
+model User {
+  id            Int    @id() @default(autoincrement())
+  username      String @unique
+  email         String @unique
+  password      String
+  name          String
+  profile_image String @default("https://xsgames.co/randomusers/avatar.php?g=pixel")
+}
