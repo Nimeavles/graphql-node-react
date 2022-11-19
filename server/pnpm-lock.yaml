@@ -12,6 +12,7 @@ specifiers:
   esbuild: ^0.15.13
   esbuild-node-tsc: ^2.0.4
   express: ^4.18.2
+  gql-tag: ^1.0.1
   graphql: ^16.6.0
   morgan: ^1.10.0
   nodemon: ^2.0.20
@@ -23,6 +24,7 @@ dependencies:
   '@apollo/server': 4.1.1_graphql@16.6.0
   cors: 2.8.5
   express: 4.18.2
+  gql-tag: 1.0.1
   graphql: 16.6.0
   uuid: 9.0.0
 
@@ -1133,6 +1135,10 @@ packages:
       p-cancelable: 2.1.1
       responselike: 2.0.1
     dev: true
+
+  /gql-tag/1.0.1:
+    resolution: {integrity: sha512-eVxldTiOtJJ3ySNgYbfRwyIyDDMATJ/ykojlQng5ihX1V0Xpr4C7ZXSZuWo7tg+kf+GS8lzhlbZmKSDjbYGhyA==}
+    dev: false
 
   /graphql/16.0.0:
     resolution: {integrity: sha512-n9NxoRfwnpYBZB/WJ7L166gyrShuZ8qYgVaX8oxVyELcJfAwkvwPt6WlYIl90WRlzqDjaNWvLmNOSnKs5llZWQ==}
