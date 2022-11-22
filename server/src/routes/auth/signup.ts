@@ -13,7 +13,7 @@ export const typeDef = gql`
 export const resolvers = {
   Mutation: {
     singup: async (root: any, args: any) => {
-      console.log("Signed Up succesfully");
+      console.log("Signed Up succesfully!");
     }
   }
 }
