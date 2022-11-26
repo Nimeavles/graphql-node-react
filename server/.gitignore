@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 mysql_data
+
+prisma/migrations
