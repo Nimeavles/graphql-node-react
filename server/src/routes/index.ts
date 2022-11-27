@@ -1,12 +1,14 @@
-import { ApolloServer } from "@apollo/server";
+import { ApolloServer } from '@apollo/server'
 import gql from "gql-tag";
 import {
   signUpDef,
   tokenDef,
   signUpResolvers,
   loginDef,
-  loginResolvers
+  loginResolvers,
+  codeDef
 } from './auth'
+import { typeDef as Test } from './test';
 
 const rootDef = gql`
   type Query {
@@ -19,6 +21,6 @@ const rootDef = gql`
 `;
 
 export const server = new ApolloServer({
-  typeDefs: [rootDef, signUpDef, tokenDef, loginDef],
+  typeDefs: [rootDef, signUpDef, tokenDef, loginDef, codeDef, Test],
   resolvers: [signUpResolvers, loginResolvers]
 })
