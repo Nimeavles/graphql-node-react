@@ -15,7 +15,7 @@ export async function loginOnDb(email: string, password: string) {
 
     const passwordDeshashed = await compare(password, User.password);
 
-    if (passwordDeshashed) return { code: 200, message: 'User logged in successfully' }
+    if (passwordDeshashed) return { code: 200, message: 'User logged in successfully', data: { username: User.username, id: User.id } }
 
     return { code: 401, message: 'User not found' }
 

@@ -10,14 +10,14 @@ export const typeDef = gql`
       password: String!
       email: String!
       username: String!
-    ): Code!
+    ): Token!
   }
 `
 
 export const resolvers = {
   Mutation: {
     signUp: async (root: any, args: any) => {
-      const { code, message } = await signUpController(args);
+      const { code, jwt: token } = await signUpController(args);
 
       for (const i of errors) {
         if (i.code === code) {
@@ -29,7 +29,8 @@ export const resolvers = {
           })
         }
       }
-      return { code }
+
+      return { token }
     }
   }
 }

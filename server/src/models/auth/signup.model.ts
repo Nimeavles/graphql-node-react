@@ -15,7 +15,7 @@ export async function SignUpUserOnDB(name: string, password: string, email: stri
       }
     });
 
-    return { code: 200, message: 'User created succesfully' };
+    return { code: 200, message: 'User created succesfully', data: { username: query.username, id: query.id } };
 
   } catch (error: any) {
     return { code: error.code || 500, message: error.message || 'Internal Server Error' }
