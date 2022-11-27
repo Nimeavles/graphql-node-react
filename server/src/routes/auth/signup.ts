@@ -29,9 +29,6 @@ export const resolvers = {
           })
         }
       }
-
-      console.log({ code });
-
       return { code }
     }
   }
