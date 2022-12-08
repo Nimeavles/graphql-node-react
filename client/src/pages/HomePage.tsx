@@ -8,7 +8,7 @@ import MediaQuery from 'react-responsive'
 
 export function HomePage() {
   return (
-    <Box minH="100vh" bg="#0d0d0d">
+    <Box minH="100vh" bg="#0d0d0d" position="relative">
       <Box sx={{ height: "9rem" }} color="#fff" marginBottom={{ xl: "100px", xxl: '0px' }}>
         <Flex sx={{ height: "100%" }} alignItems="center" justifyContent="space-between">
           <Box>

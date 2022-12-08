@@ -1,10 +1,13 @@
-import { SearchIcon, HamburgerIcon } from '@chakra-ui/icons'
+import { useState } from 'react'
+import { SearchIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { Box, Flex, IconButton, Input, InputGroup, InputRightElement } from '@chakra-ui/react'
 import { NavLink } from 'react-router-dom'
 import MediaQuery from 'react-responsive'
 import '../../styles/home.module.css'
 
 function Navbar() {
+
+  const [open, setOpen] = useState(false);
 
   return (
     <>
@@ -16,13 +19,10 @@ function Navbar() {
                 <b>Inicio</b>
               </NavLink>
               <NavLink to={'/'}>
-                <b>About</b>
+                <b>Acceder</b>
               </NavLink>
               <NavLink to={'/'}>
-                <b>Timing</b>
-              </NavLink>
-              <NavLink to={'/'}>
-                <b>Courses</b>
+                <b>MartketPlace</b>
               </NavLink>
             </ul>
           </Box>
@@ -38,7 +38,45 @@ function Navbar() {
         </Flex>
       </MediaQuery>
       <MediaQuery maxWidth="620px">
-        <IconButton marginRight="4rem" aria-label='Hamburguer' p="10px" _hover={{ bgGradient: 'linear(to-r, #5959c2 0%, #5f5fd0 25%, #6c6ceb 100%)' }} bg='none' children={<HamburgerIcon color="white" h="30px" w="30px" />} />
+        <Flex display="relative">
+          <IconButton
+            marginRight="4rem"
+            aria-label='Hamburguer'
+            p="10px"
+            _hover={{ bgGradient: "linear(to-r, #5959c2 0%, #5f5fd0 25%, #6c6ceb 100%)" }}
+            bg='none'
+            children={<HamburgerIcon color="white" h="30px" w="30px" />}
+            onClick={() => setOpen(!open)}
+          />
+          {
+            open && (
+              <Flex alignItems="center" justifyContent="center" direction="column" h="100vh" w="100vw" position="absolute" top="0" left="0" bgGradient="linear(to-r, #5959c2 0%, #5f5fd0 25%, #6c6ceb 100%)" fontFamily="header" opacity="0.9">
+                <IconButton
+                  aria-label='Hamburguer'
+                  p="10px"
+                  position="absolute"
+                  left="10"
+                  top="10"
+                  _hover={{ bg: 'gray.500' }}
+                  bg='none'
+                  children={<CloseIcon color="black" h="30px" w="30px" />}
+                  onClick={() => setOpen(!open)}
+                />
+                <ul style={{ display: 'flex', justifyContent: 'space-around', height: "50%", flexDirection: 'column', fontSize: '30px' }}>
+                  <NavLink to={'/'}>
+                    <b>Inicio</b>
+                  </NavLink>
+                  <NavLink to={'/'}>
+                    <b>Acceder</b>
+                  </NavLink>
+                  <NavLink to={'/'}>
+                    <b>MartketPlace</b>
+                  </NavLink>
+                </ul>
+              </Flex>
+            )
+          }
+        </Flex>
       </MediaQuery>
     </>
   )
