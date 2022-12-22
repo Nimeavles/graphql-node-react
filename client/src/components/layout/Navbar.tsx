@@ -1,7 +1,14 @@
 import { useState } from 'react'
 import { SearchIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
-import { Box, Flex, IconButton, Input, InputGroup, InputRightElement } from '@chakra-ui/react'
-import { NavLink } from 'react-router-dom'
+import {
+  Box,
+  Flex,
+  IconButton,
+  Input,
+  InputGroup,
+  InputRightElement,
+} from '@chakra-ui/react'
+import { NavItems } from '../Home/NavItems';
 import MediaQuery from 'react-responsive'
 import '../../styles/home.module.css'
 
@@ -14,17 +21,7 @@ function Navbar() {
       <MediaQuery minWidth="621px">
         <Flex w={{ md: '55%', lg: "65%" }} bgGradient="linear(to-r, #5959c2 0%, #5f5fd0 25%, #6c6ceb 100%)" paddingY="15px" borderLeftRadius="20px" borderRightRadius="5px" alignItems="center">
           <Box fontFamily="header" w={{ md: '100%', lg: "70%" }} >
-            <ul style={{ display: 'flex', justifyContent: 'space-around', width: '100%' }}>
-              <NavLink to={'/'}>
-                <b>Inicio</b>
-              </NavLink>
-              <NavLink to={'/'}>
-                <b>Acceder</b>
-              </NavLink>
-              <NavLink to={'/'}>
-                <b>MartketPlace</b>
-              </NavLink>
-            </ul>
+            <NavItems />
           </Box>
           <MediaQuery maxWidth="960px">
             <IconButton aria-label='Buscar' bg='none' children={<SearchIcon color="black" />} />
@@ -62,17 +59,7 @@ function Navbar() {
                   children={<CloseIcon color="black" h="30px" w="30px" />}
                   onClick={() => setOpen(!open)}
                 />
-                <ul style={{ display: 'flex', justifyContent: 'space-around', height: "50%", flexDirection: 'column', fontSize: '30px' }}>
-                  <NavLink to={'/'}>
-                    <b>Inicio</b>
-                  </NavLink>
-                  <NavLink to={'/'}>
-                    <b>Acceder</b>
-                  </NavLink>
-                  <NavLink to={'/'}>
-                    <b>MartketPlace</b>
-                  </NavLink>
-                </ul>
+                <NavItems flexDirection="column" height='60%' fontSize='40px' alignItems='center' />
               </Flex>
             )
           }

@@ -12,6 +12,7 @@ specifiers:
   framer-motion: ^7.6.12
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-hook-form: ^7.40.0
   react-responsive: ^9.0.2
   react-router-dom: ^6.4.3
   typescript: ^4.6.4
@@ -26,6 +27,7 @@ dependencies:
   framer-motion: 7.6.12_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-hook-form: 7.40.0_react@18.2.0
   react-responsive: 9.0.2_react@18.2.0
   react-router-dom: 6.4.3_biqbaboplfbrettd7655fr4n2y
 
@@ -2303,6 +2305,15 @@ packages:
       react-clientside-effect: 1.2.6_react@18.2.0
       use-callback-ref: 1.3.0_fan5qbzahqtxlm5dzefqlqx5ia
       use-sidecar: 1.1.2_fan5qbzahqtxlm5dzefqlqx5ia
+    dev: false
+
+  /react-hook-form/7.40.0_react@18.2.0:
+    resolution: {integrity: sha512-0rokdxMPJs0k9bvFtY6dbcSydyNhnZNXCR49jgDr/aR03FDHFOK6gfh8ccqB3fl696Mk7lqh04xdm+agqWXKSw==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-is/16.13.1:
