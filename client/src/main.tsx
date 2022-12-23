@@ -5,11 +5,19 @@ import "@fontsource/dm-sans/500.css";
 import App from './App'
 import theme from './theme/ChakraTheme';
 import './styles/index.css'
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+
+const client = new ApolloClient({
+  uri: 'http://localhost:3000',
+  cache: new InMemoryCache()
+});
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <App />
-    </ChakraProvider>
+    <ApolloProvider client={client}>
+      <ChakraProvider theme={theme}>
+        <App />
+      </ChakraProvider>
+    </ApolloProvider>
   </React.StrictMode>
 )

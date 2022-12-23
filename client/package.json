@@ -9,12 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.3",
     "@chakra-ui/icons": "^2.0.12",
     "@chakra-ui/react": "^2.4.1",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/dm-sans": "^4.5.9",
+    "@hookform/error-message": "^2.0.1",
     "framer-motion": "^7.6.12",
+    "graphql": "^16.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.40.0",
@@ -22,6 +25,8 @@
     "react-router-dom": "^6.4.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "@chakra-ui/system": "^2.3.5",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
