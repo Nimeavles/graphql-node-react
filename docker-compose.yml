@@ -5,12 +5,14 @@ services:
     ports:
       - "4000:4000"
     volumes:
+      - /client/node_modules
       - ./client:/client
   server:
     build: ./server/
     ports:
       - "3000:3000"
     volumes:
+      - /server/node_modules
       - ./server:/server
   mysql:
     image: mysql
